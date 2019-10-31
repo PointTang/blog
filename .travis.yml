@@ -17,7 +17,8 @@ script:
 
 after_script:
   - cd public
-  - ls
+  - ls -l
+  - pwd
 
 branches:
   only:
