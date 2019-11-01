@@ -17,9 +17,17 @@ script:
 
 after_script:
   - cd public
-  - ls -l
-  - pwd
+  - git init
+  - git config user.name "PointTang"
+  - git config user.email "point_1024@163.com"
+  - git add .
+  - git commit -m "更新"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
 
 branches:
   only:
     - master
+env:
+ global:
+   - GH_REF: github.com/PointTang/blog.git
+   - secure: "J7WbcVfc02nNtQ72W6CnKLG3h6xN1uXd8P744g+wd7oIXDbkyv27rMvyKUpoMV3krl6WtSPYE1rvzgAfC8k5NCz4gD4Rwhz36L5x8iUyRn9tCnahUPmgzKGixxTsnRAxyfN6NDvM6voGPQ7HbrRXLqGIoUlBrtPUXd0RrSjIgU2PAMvp2raUsJSXd1f+ospPA7QJUqD3RF23+ExXi53GQyoZ6yLyrKt1WLABEOprar7lVfZjaP+6JlzQQkb1X0MlnYGrFD+IDWsBK5Fvisxid4J87J7OFTuIgtc2uppRh23JIQF0Bq7f4DpMQbB2yPV/yOVKYvOhPiXIa58aSi5DC5Z6j8RwVhavIYbrbo97LMXOp9plrxbuzH6mJD9QndCfVitiwHCaQHtWfzjllJOF9gUZNnX3nst1Fs8FAAi6tLlru+3HJRodDQlsBeOvzKVUp+nS/NlJ9T8q5CyKcHdtn0H8CwPzafNXq2b1tAj+PQq8bpx5d+tDyUyIeLEJVDWzO7BS3e4YKeGsbHn9pV0RJ1Tu99KZhaIRHeq1DdaT0wQ69KPiy46jkp1SBbwa2okherEzqTaPQtWQsuv8wJrNYjI6rqFrclraHtpnQim6XVpinc+ogJLNBLIoEdQpE1Pc8acZwpw3rDa6LKlACboPo7TlY1/90+RedjpOGAfFqP8="
