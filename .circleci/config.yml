@@ -12,10 +12,13 @@ jobs:
           name: 安装依赖
           command: npm install
       - run:
-          name:  生成页面
+          name:  查看内容
           command: |
+            ls
             ls themes
-            hexo generate
+      - run:
+          name:  生成页面
+          command: hexo generate
       - run:
           name: 部署Github Pages
           command: |
