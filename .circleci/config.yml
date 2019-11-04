@@ -13,7 +13,7 @@ jobs:
           command: npm install
       - run:
           name:  生成页面
-          command: 
+          command: |
             ls
             git submodule init
             git submodule update
