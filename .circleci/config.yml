@@ -16,6 +16,8 @@ jobs:
           command: |
             ls
             ls themes
+            cd themes
+            ls 3-hexo
       - run:
           name:  生成页面
           command: hexo generate
