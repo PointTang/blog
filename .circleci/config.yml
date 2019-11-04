@@ -13,7 +13,10 @@ jobs:
           command: npm install
       - run:
           name:  生成页面
-          command: hexo generate
+          command: 
+            git submodule init
+            git submodule update
+            hexo generate
       - run:
           name: 部署Github Pages
           command: |
