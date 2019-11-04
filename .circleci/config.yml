@@ -18,6 +18,11 @@ jobs:
             ls themes
             cd themes
             ls 3-hexo
+            cd ..
+            git submodule init
+            git submodule checkout
+            cd themes
+            ls 3-hexo
       - run:
           name:  生成页面
           command: hexo generate
