@@ -41,3 +41,17 @@ $ git rm --cached themes/3-hexo
 
 用这个命令先把原来的删掉再说。
 
+下一步，用submodule来管理。老老实实按教程来。
+
+先fork一个到我自己的目录底下。
+
+然后在本地跑这个命令。
+
+```
+git submodule add https://github.com/PointTang/hexo-theme-3-hexo.git themes/3-hexo
+
+
+```
+
+
+
