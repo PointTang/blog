@@ -19,7 +19,9 @@ jobs:
             cd themes
             ls 3-hexo
             cd ..
-            git submodule init themes/3-hexo
+            echo "submodule init."
+            git submodule init 
+            echo "submodule update."
             git submodule update
             cd themes
             ls 3-hexo
