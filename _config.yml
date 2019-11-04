@@ -80,10 +80,10 @@ stylus:
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-#deploy:
-  #type: git
-  #repository: git@github.com:PointTang/PointTang.github.io.git
-  #branch: master
+deploy:
+  type: git
+  repository: git@github.com:PointTang/PointTang.github.io.git
+  branch: master
 
   
 
